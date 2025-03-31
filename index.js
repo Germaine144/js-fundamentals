@@ -59,3 +59,21 @@ function sumArray(arr) {
     return arr.reduce((sum, num) => sum + num, 0);
 }
 console.log(`Sum of all numbers in an array ${sumArray([1, 2, 3, 4, 5,30,40])}`);
+// Write a function that calculates the average of all numbers in an array
+
+function averageArray(arr) {
+    return sumArray(arr) / arr.length;
+}
+console.log(`Average of all numbers in an array ${averageArray([1, 2, 3, 4, 5,30,40])}`);
+// Write a function that returns the largest number in an array
+
+function findMax(arr) {
+    return Math.max(...arr);
+}
+console.log(`Largest number in an array ${findMax([1, 2, 3, 4, 5,30,40])}`);
+// Write a function that returns the smallest number in an array.
+
+function findMin(arr) {
+    return Math.min(...arr);
+}
+console.log(`Smallest number in an array ${findMin([1, 2, 3, 4, 5,30,40])}`);
