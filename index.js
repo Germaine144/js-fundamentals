@@ -30,4 +30,9 @@ console.log(toSnakeCase('Hello Classification'));
 function toCamelCase(str) {
     return str.replace(/_([a-z])/g, (g) => g[1].toUpperCase());
 }
-console.log(toCamelCase('hello_classification')); 
+console.log(toCamelCase('hello_classification'));
+//Write a function that finds the longest word in a given string.
+function longestWord(str) {
+    return str.split(' ').reduce((longest, current) => (current.length > longest.length)? current : longest, '');
+}
+console.log(longestWord(' laid out')); 
