@@ -25,3 +25,9 @@ function toSnakeCase(str) {
     return str.replace(/[^A-Za-z0-9]/g, '_').toLowerCase();
 }
 console.log(toSnakeCase('Hello Classification')); 
+// Write a function that converts a string to camelCase.
+
+function toCamelCase(str) {
+    return str.replace(/_([a-z])/g, (g) => g[1].toUpperCase());
+}
+console.log(toCamelCase('hello_classification')); 
