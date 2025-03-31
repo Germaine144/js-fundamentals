@@ -36,3 +36,9 @@ function longestWord(str) {
     return str.split(' ').reduce((longest, current) => (current.length > longest.length)? current : longest, '');
 }
 console.log(longestWord(' laid out')); 
+// Write a function that counts the number of times a specific letter appears in a string
+
+function countLetter(str, letter) {
+    return str.toLowerCase().split(letter.toLowerCase()).length - 1;
+}
+console.log(countLetter('umuhire', 'u')); 
