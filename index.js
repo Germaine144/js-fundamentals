@@ -3,3 +3,10 @@ function capitalize(str) {
     return str.charAt(0).toUpperCase() + str.slice(1);
 }
 console.log(capitalize('hello world')); // Output: Hello World
+//Write a function that reverses a given string.
+
+function reverseString(str) {
+    return str.split('').reverse().join('');
+}
+console.log(reverseString('hello world')); 
+
