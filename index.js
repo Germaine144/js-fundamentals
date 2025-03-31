@@ -44,8 +44,18 @@ function countLetter(str, letter) {
 console.log(countLetter('umuhire', 'u')); 
 // Array Transformations
 //Write a function that doubles every number in an array.
-
 function doubleNumbers(arr) {
     return arr.map(num => num * 2);
 }
 console.log(doubleNumbers([1, 2, 3, 4])); 
+//Write a function that filters out even numbers from an array
+function filterEvenNumbers(arr) {
+    return arr.filter(num => num % 2!== 0);
+}
+console.log(filterEvenNumbers([1, 2, 3, 4, 5])); 
+//Write a function that calculates the sum of all numbers in an array
+
+function sumArray(arr) {
+    return arr.reduce((sum, num) => sum + num, 0);
+}
+console.log(`Sum of all numbers in an array ${sumArray([1, 2, 3, 4, 5,30,40])}`);
