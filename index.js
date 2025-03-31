@@ -42,3 +42,10 @@ function countLetter(str, letter) {
     return str.toLowerCase().split(letter.toLowerCase()).length - 1;
 }
 console.log(countLetter('umuhire', 'u')); 
+// Array Transformations
+//Write a function that doubles every number in an array.
+
+function doubleNumbers(arr) {
+    return arr.map(num => num * 2);
+}
+console.log(doubleNumbers([1, 2, 3, 4])); 
