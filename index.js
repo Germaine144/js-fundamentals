@@ -83,3 +83,62 @@ function removeDuplicates(arr) {
     return [...new Set(arr)];
 }
 console.log(removeDuplicates([1, 2, 3, 3, 4, 5, 5])); 
+//Write a function that returns the index of a given value in an array (or -1 if not found)
+
+function findIndex(arr, value) {
+    return arr.indexOf(value);
+}
+console.log(findIndex([1, 2, 3, 4, 5], 3)); 
+//Object Transformations
+function fullName(person) {
+    return `${person.firstName} ${person.lastName}`;
+}
+console.log(fullName({ firstName: 'John', lastName: 'Doe' })); 
+//. isAdult(person) – Write a function that checks if a person is 18 or older (given property age).
+function isAdult(person) {
+    return person.age >= 18;
+}
+console.log(isAdult({ age: 25 })); 
+// filterByAge(people, minAge) – Write a function that filters an array of person objects to keep only those who are at least minAge years old.
+function filterByAge(people, minAge) {
+    return people.filter(person => person.age >= minAge);
+}
+console.log(filterByAge([{ age: 12 }, { age: 25 }, { age: 30 }] ,18)); 
+// Write a function that adds a new property to an object.
+function addProperty(obj, key, value) {
+    obj[key] = value;
+    return obj;
+}
+console.log(addProperty({}, 'name', 'new vision'));
+// Write a function that checks if an object has a specific property.
+
+function hasProperty(obj, key) {
+    return obj.hasOwnProperty(key);
+}
+const person = { name: "Alice", age: 25, city: "New York" };
+
+console.log(hasProperty(person, "age")); 
+console.log(hasProperty(person, "gender")); 
+
+// deleteProperty(obj, key) – Write a function that deletes a specific property from an object.
+function deleteProperty(obj, key) {
+    if (obj.hasOwnProperty(key)) {
+        delete obj[key];
+        return true; // Property was deleted
+    }
+    return false; // Property didn't exist
+}
+const persons = { name: "Alice", age: 25, city: "New York" };
+
+console.log(deleteProperty(persons, "age"));  // Output: true
+console.log(persons); // Output: { name: "Alice", city: "New York" }
+
+console.log(deleteProperty(persons, "gender")); // Output: false (property doesn't exist)
+//countProperties(obj) – Write a function that returns the number of properties in an object
+
+function countProperties(obj) {
+    return Object.keys(obj).length;
+}
+console.log(countProperties({ name: "Alice", age: 25, city: "New York" })); // Output: 3
+//Function Composition & Higher-Order Functions
+
