@@ -77,3 +77,9 @@ function findMin(arr) {
     return Math.min(...arr);
 }
 console.log(`Smallest number in an array ${findMin([1, 2, 3, 4, 5,30,40])}`);
+//– Write a function that removes duplicate values from an array
+
+function removeDuplicates(arr) {
+    return [...new Set(arr)];
+}
+console.log(removeDuplicates([1, 2, 3, 3, 4, 5, 5])); 
