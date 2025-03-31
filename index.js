@@ -9,4 +9,9 @@ function reverseString(str) {
     return str.split('').reverse().join('');
 }
 console.log(reverseString('hello world')); 
+//Write a function that checks if a string is a palindrome
 
+function isPalindrome(str) {
+    return str === reverseString(str);
+}
+console.log(isPalindrome('racecars')); 
